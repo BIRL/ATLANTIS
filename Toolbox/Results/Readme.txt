@@ -1,0 +1,1 @@
+This is the folder where ALTANTIS-generated analysis files are stored.
