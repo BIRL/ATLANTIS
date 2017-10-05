@@ -44,8 +44,8 @@ try
     fprintf(fileID,nodeDefault);
     fprintf(fileID,'\n');
     %default node and edge variables
-    defaultActEdgeLabelColor = 'red';
-    defaultInhEdgeLabelColor = 'green';
+    defaultActEdgeLabelColor = 'green';
+    defaultInhEdgeLabelColor = 'red';
     defaultEdgeLabelStyle = 'bold';
     
     % INTERACTION MATRIX
