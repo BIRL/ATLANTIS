@@ -1,3 +1,0 @@
-WNT	Frizzled
-0	0
-1	1

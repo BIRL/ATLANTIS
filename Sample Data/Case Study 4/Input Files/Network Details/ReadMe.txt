@@ -1,1 +1,0 @@
-Adapted from the work of Cho et al (2016).

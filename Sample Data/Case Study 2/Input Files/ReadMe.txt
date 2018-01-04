@@ -1,1 +1,0 @@
-The cell fate logic has been adapted from the work of Choi et al (See references in the Case Study 2 folder for more information)

@@ -1,5 +1,0 @@
-2 -> Means protein/gene activity is showing oscilatory behavior i.e. the node activity is fliping between on and off
-
-1 -> Means node activtiy is continously on
-
-0 -> Means node activtiy is continously off
