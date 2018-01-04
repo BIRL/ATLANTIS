@@ -1,2 +1,0 @@
-0_MCF-7 -> MCF 7 cell network simulations WITHOUT DNA Damage
-1_MCF-7 -> MCF 7 cell network simulations WITH DNA Damage 

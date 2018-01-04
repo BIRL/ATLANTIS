@@ -1,1 +1,0 @@
-Use for sketching Human Signaling network in ATLANTIS.
