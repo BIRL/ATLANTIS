@@ -1,0 +1,3 @@
+APC 0
+Ras 1
+PTEN 0

@@ -1,0 +1,1 @@
+The logical update expressions for each node in 'Control (0).txt', 'Etoposide (1).txt', '0_Nutlin.txt' and 'Etoposide_Nutlin3.txt' were generated from the logic tables of P53 signaling network adapted from the work of Cho et al (For reference see file in Case study 2 directory).

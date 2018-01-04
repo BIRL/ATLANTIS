@@ -1,0 +1,3 @@
+Ras 1
+PI3K 1
+AKT 0

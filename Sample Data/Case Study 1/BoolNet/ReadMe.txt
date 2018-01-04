@@ -1,0 +1,1 @@
+The logical update expressions for each node in "Wang Boolnet Input.txt" were generated from the logic tables of yeast cell cycle network created using the network information adapted from Han et al (See reference file in the Case Study 1 directory for more information).

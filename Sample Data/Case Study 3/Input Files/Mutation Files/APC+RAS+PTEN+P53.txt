@@ -1,0 +1,4 @@
+APC 0
+Ras 1
+PTEN 0
+p53 0

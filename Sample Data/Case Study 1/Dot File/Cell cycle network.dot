@@ -1,0 +1,39 @@
+digraph g {
+	nodesep=0.4;
+	node [shape = ellipse, color=white, style=filled, fontsize = 20 ];
+
+	"Cln3" -> "Cln3" [style=bold ,color=red, label=" -1 "];
+	"Cln3" -> "MBF" [style=bold ,color=green, label="+ 1 "];
+	"Cln3" -> "SBF" [style=bold ,color=green, label="+ 1 "];
+	"MBF" -> "Clb5-6" [style=bold ,color=green, label="+ 1 "];
+	"SBF" -> "Cln1-2" [style=bold ,color=green, label="+ 1 "];
+	"Cln1-2" -> "Cln1-2" [style=bold ,color=red, label=" -1 "];
+	"Cln1-2" -> "Cdh1" [style=bold ,color=red, label=" -1 "];
+	"Cln1-2" -> "Sic1" [style=bold ,color=red, label=" -1 "];
+	"Cdh1" -> "Clb1-2" [style=bold ,color=red, label=" -1 "];
+	"Swi5" -> "Swi5" [style=bold ,color=red, label=" -1 "];
+	"Swi5" -> "Sic1" [style=bold ,color=green, label="+ 1 "];
+	"Cdc20" -> "Cdh1" [style=bold ,color=green, label="+ 1 "];
+	"Cdc20" -> "Swi5" [style=bold ,color=green, label="+ 1 "];
+	"Cdc20" -> "Cdc20" [style=bold ,color=red, label=" -1 "];
+	"Cdc20" -> "Clb5-6" [style=bold ,color=red, label=" -1 "];
+	"Cdc20" -> "Sic1" [style=bold ,color=green, label="+ 1 "];
+	"Cdc20" -> "Clb1-2" [style=bold ,color=red, label=" -1 "];
+	"Clb5-6" -> "Cdh1" [style=bold ,color=red, label=" -1 "];
+	"Clb5-6" -> "Sic1" [style=bold ,color=red, label=" -1 "];
+	"Clb5-6" -> "Clb1-2" [style=bold ,color=green, label="+ 1 "];
+	"Clb5-6" -> "Mcm1" [style=bold ,color=green, label="+ 1 "];
+	"Sic1" -> "Clb5-6" [style=bold ,color=red, label=" -1 "];
+	"Sic1" -> "Clb1-2" [style=bold ,color=red, label=" -1 "];
+	"Clb1-2" -> "MBF" [style=bold ,color=red, label=" -1 "];
+	"Clb1-2" -> "SBF" [style=bold ,color=red, label=" -1 "];
+	"Clb1-2" -> "Cdh1" [style=bold ,color=red, label=" -1 "];
+	"Clb1-2" -> "Swi5" [style=bold ,color=red, label=" -1 "];
+	"Clb1-2" -> "Cdc20" [style=bold ,color=green, label="+ 1 "];
+	"Clb1-2" -> "Sic1" [style=bold ,color=red, label=" -1 "];
+	"Clb1-2" -> "Mcm1" [style=bold ,color=green, label="+ 1 "];
+	"Mcm1" -> "Swi5" [style=bold ,color=green, label="+ 1 "];
+	"Mcm1" -> "Cdc20" [style=bold ,color=green, label="+ 1 "];
+	"Mcm1" -> "Clb1-2" [style=bold ,color=green, label="+ 1 "];
+	"Mcm1" -> "Mcm1" [style=bold ,color=red, label=" -1 "];
+}

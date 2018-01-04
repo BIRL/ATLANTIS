@@ -1,0 +1,1 @@
+The boolean network (node list and node update logic tables), cell fate logic, and simulation 1 network state list has been adapted from the work of Cho et al 2016 (See references in the Case Study 4 folder for more information). The HCT 116 mutations information was taken from COSMIC database by Sanger Institute.

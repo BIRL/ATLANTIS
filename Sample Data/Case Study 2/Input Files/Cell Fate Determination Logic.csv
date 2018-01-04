@@ -1,0 +1,7 @@
+Cell Fate,P53,P21,Cyc E,Caspase
+Proliferation,0,0,1,0
+Senescence,1,0,1,0
+Senescence,1,1,0,0
+Apoptosis,1,1,0,1
+Apoptosis,1,0,1,1
+Cell Cycle Arrest,,2,2,
