@@ -1,1 +1,0 @@
-This folder hosts complete 'Result Folders' that are generated during Analysis.
