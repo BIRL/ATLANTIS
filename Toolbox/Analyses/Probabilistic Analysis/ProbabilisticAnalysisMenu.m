@@ -191,6 +191,7 @@ if strfind(filename, '.mat')
     % CHECK HOW MANY VAR IN MAT FILE
     if numel(varName) == 0 || numel(varName) > 1
         uiwait(errordlg('The selected mat file is either empty or contains multiple variables. Please input mat file containing only one network state list.', 'Invalid mat file'));
+        enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
         return;
     end
     
@@ -205,6 +206,7 @@ elseif strfind(filename, '.csv')
     % CHECK IF EMPTY AND IS CONTAINS NUMERIC DATA
     if isempty(fileInfo)
         uiwait(errordlg('The selected csv file is empty. Please input valid csv. Press help for more information.', 'Invalid mat file'));
+        enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
         return;
     end
     
@@ -246,12 +248,16 @@ try
     
     % UPDATE CONSOLE
     set(handles.Console, 'String', 'Selected network state list input added to the network.');
+    
+    % MSGBOX
+    uiwait(msgbox('Selected network state list input added to the network', 'Success'));
 catch
     % ERROR DLG
     uiwait(errordlg('The selected file is invalid. Possible reasons: 1) No variable in the mat file, 2) is not boolean, 3) variables in state list differ from node count. Please press help for more information on data input.', 'Invalid data input'));
     
     % UPDATE CONSOLE
     set(handles.Console, 'String', 'Invalid user input.');
+    enableDisableFig(findall(0, 'tag','ATLANTIS_Main'), 'off');
     return;
 end
 

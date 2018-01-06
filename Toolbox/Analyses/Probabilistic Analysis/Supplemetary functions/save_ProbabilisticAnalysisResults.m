@@ -99,7 +99,7 @@ try
         
         % ADDING HEADERS
         fprintf(fid, formatToken, header{:, 1:3}, names{:});
-        fprintf(fid, [filesep, 'n']);
+        fprintf(fid, ['\', 'n']);
         
         % POPULATING FILES
         for i = 1:size(SSPs, 1)  
@@ -110,7 +110,7 @@ try
             % POPULATE FILE
             fprintf(fid, '%s,', attrNumb, associatedFate, propensity);
             fprintf(fid, '%u,', stateSpace(i, :));
-            fprintf(fid, [filesep, 'n']);
+            fprintf(fid, ['\', 'n']);
         end
         
         progressbar(0.4/1);
@@ -156,7 +156,7 @@ try
         
         % ADDING HEADERS
         fprintf(fid, formatToken, header{:, 1:3}, names{:});
-        fprintf(fid, [filesep, 'n']);
+        fprintf(fid, ['\', 'n']);
         
         % POPULATING FILES
         for i = 1:size(stateNum, 1)  
@@ -167,7 +167,7 @@ try
             % POPULATE FILE
             fprintf(fid, '%s,', attrNumb, associatedFate, propensity);
             fprintf(fid, '%u,', statesInTrajectory(i, :));
-            fprintf(fid, [filesep, 'n']);
+            fprintf(fid, ['\', 'n']);
         end
                 
         fclose(fid);

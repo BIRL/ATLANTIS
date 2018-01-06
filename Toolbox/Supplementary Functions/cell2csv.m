@@ -49,7 +49,7 @@ cellArray = cellfun(@StringX, cellArray, 'UniformOutput', false);
 datei = fopen(fileName, 'w');
 [nrows,ncols] = size(cellArray);
 for row = 1:nrows
-    fprintf(datei,[sprintf(['%s' separator],cellArray{row,1:ncols-1}) cellArray{row,ncols} filesep 'n']);
+    fprintf(datei,[sprintf(['%s' separator],cellArray{row,1:ncols-1}) cellArray{row,ncols} '\n']);
 end    
 % Closing file
 fclose(datei);

@@ -75,21 +75,21 @@ try
         header = horzcat({'Attractor #'}, 'Attractor Type', 'Associated Cell Fate', 'Basin Size');
         
         % CREATE FILES
-        fid1 = fopen(strcat(PathName, FileName1), 'w');
-        fid2 = fopen(strcat(PathName, FileName2), 'w');
+        fid2 = fopen(strcat(PathName, FileName1), 'w');
+        fid1 = fopen(strcat(PathName, FileName2), 'w');
         fid3 = fopen(strcat(PathName, FileName3), 'w');
         
         formatToken = '%s,';
         
         % ADDING HEADERS
         fprintf(fid1, formatToken, header{:, 1:4}, names{:});
-        fprintf(fid1, [filesep, 'n']);
+        fprintf(fid1, ['\', 'n']);
         
         fprintf(fid2, formatToken, header{:, 1:4}, names{:});
-        fprintf(fid2, [filesep, 'n']);
+        fprintf(fid2, ['\', 'n']);
         
         fprintf(fid3, formatToken, header{:, 1:4}, names{:});
-        fprintf(fid3, [filesep, 'n']);
+        fprintf(fid3, ['\', 'n']);
         
         % POPULATING FILES
         for i = 1:size(attractorTable, 1)
@@ -107,22 +107,22 @@ try
             % POPULATE FILE 1
             fprintf(fid1, '%s,', attrNumb, attractorType, associatedFate, propensity);
             fprintf(fid1, '%d,', activityInFractions(:));
-            fprintf(fid1, [filesep, 'n']);
+            fprintf(fid1, ['\', 'n']);
             
             % POPULATE FILE 2
             fprintf(fid2, '%s,', attrNumb, attractorType, associatedFate, propensity);
             fprintf(fid2, '%d,', activityInWholes(:));
-            fprintf(fid2, [filesep, 'n']);
+            fprintf(fid2, ['\', 'n']);
             
             % POPULATE FILE 3
             for l = 1:attrSize
                 attractor = states(l, :);
                 fprintf(fid3, '%s,', attrNumb, attractorType, associatedFate, propensity);
                 fprintf(fid3, '%u,', attractor(:));
-                fprintf(fid3, [filesep, 'n']);
+                fprintf(fid3, ['\', 'n']);
             end
             
-            fprintf(fid3, [filesep, 'n']);
+            fprintf(fid3, ['\', 'n']);
             
         end
         
@@ -152,7 +152,7 @@ try
         
         % ADDING HEADER
         fprintf(fid4, formatToken, header{:});
-        fprintf(fid4, [filesep, 'n']);
+        fprintf(fid4, ['\', 'n']);
         
         cellFates = cellfateTable(:,1);
         propensities = cellfateTable(:,2);
@@ -163,7 +163,7 @@ try
             propensity = num2str(propensities{i});
             
             % POPULATE FILE
-            fprintf(fid4, ['%s, %s ', filesep,'n'], cellFate, propensity);
+            fprintf(fid4, ['%s, %s ', '\','n'], cellFate, propensity);
         end
         
         % CLOSE ANY OPEN FILES
