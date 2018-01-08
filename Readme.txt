@@ -11,6 +11,7 @@
   •	Windows 7, 64 bit
   •	Windows 10, 64 bit
   •	Windows Server 2012 R2, 64 bit
+  •	macOS Sierra 10.12, 64-bit
  All testing is based upon the following MATLAB versions:
   •	MATLAB R2014a
   •	MATLAB R2015a
