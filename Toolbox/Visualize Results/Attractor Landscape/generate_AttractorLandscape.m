@@ -49,10 +49,12 @@ elseif strcmp(plotTypes, 'P')
 end
 
 % GET STATE SPACE
-if myNetwork.PruneStateSpace == 1;
+if myNetwork.PruneStateSpace == 1
     stateSpace = myNetwork.PrunnedStateSpacePA;
+    originalStateSpace = myNetwork.PrunnedStateSpacePA;
 else
     stateSpace = myNetwork.NetworkStateList;
+    originalStateSpace = myNetwork.NetworkStateList;
 end
 
 % SETUP STATE SPACE
@@ -113,7 +115,7 @@ try
     end
     
     % ADD ATTRACTOR STATES, IF PRESENT, TO THE STATE SPACE
-    if strcmp(mappingMethod, 'naive') && ~isempty(myNetwork.AttractorTable) && size(myNetwork.NetworkStateList, 1) < 2^myNetwork.NodeCount
+    if strcmp(mappingMethod, 'naive') && ~isempty(myNetwork.AttractorTable) && size(originalStateSpace, 1) < 2^myNetwork.NodeCount
         stateSpace = unique(vertcat(stateSpace, cell2mat(myNetwork.AttractorTable(:, 1))), 'rows');
     end
     
@@ -237,7 +239,7 @@ if ~isempty(myNetwork.SteadyStateProbabilities)
     % PROCESS Z DATA STEADY STATE PROBABILITIES
     steadyStateProbs = zeros(size(stateSpace, 1), 1);
     steadyStateProbs(:) = min(originalPini);
-    [~, indicies] = ismember(myNetwork.NetworkStateList, stateSpace, 'rows');
+    [~, indicies] = ismember(originalStateSpace, stateSpace, 'rows');
     indicies(indicies == 0) = [];
     
     %%%%%%%%%%%%%%%
